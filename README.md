@@ -12,7 +12,7 @@ For instructions on how to create a Cosmos DB account please see [Create An Azur
 
 Click on the button below to deploy this repository to an Azure Web App. You will be prompted to give an appName, referred to as `<app_name>` throughout, which must be globally unique. This parameter will be used in the Web App's URL as `https://<app_name>.azurewebsites.net`. You will also be prompted to supply the primary connection string to your Cosmos DB instance.
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FAzure-Samples%2Fcosmosdb-node-mongodb-rest-service%2Fmaster%2Fdeployment%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fcosmosdb-node-mongodb-rest-service%2Fmaster%2Fdeployment%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 After provisioning to Azure, you can navigate to `https://<app_name>.azurewebsites.net/docs` to test the core read-write API functionality using Swagger UI. If you prefer to use [Postman](https://www.getpostman.com), use `https://<app_name>.azurewebsites.net/kvpair` as the URL.
 
