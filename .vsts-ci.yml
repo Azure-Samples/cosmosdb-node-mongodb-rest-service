@@ -1,0 +1,80 @@
+resources:
+  containers:
+  - container: node
+    image: node:9.11.1
+  - container: node-alpine
+    image: node:9.11.1-alpine
+
+phases:
+- phase: Build
+  queue: Hosted Linux Preview
+  steps:
+  - bash: npm install -g yarn && yarn
+    displayName: yarn install
+
+  - bash: yarn build
+    displayName: yarn build
+
+  - bash: tar -czf cache.tar dist node_modules
+    displayName: Archive Build Artifacts
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: $(Build.SourcesDirectory)/cache.tar
+      artifactName: cache
+      artifactType: container
+
+- phase: UnitTest
+  dependsOn: Build
+  queue:
+    name: Hosted Linux Preview
+    parallel: 2
+    matrix:
+      Quality:
+        cmd: ./node_modules/yarn/bin/yarn lint
+        name: yarn lint
+      Unit:
+        cmd: ./node_modules/yarn/bin/yarn test ./tests/unit/**/*.spec.ts
+        name: yarn test
+        DB_CONN_STRING: $(CosmosConnStr)
+
+  steps:
+  - task: DownloadBuildArtifacts@0
+    displayName: Restore Packages
+    inputs:
+      artifactName: cache
+      downloadPath: $(Build.SourcesDirectory)
+  
+  - bash: tar -xzf $BUILD_SOURCESDIRECTORY/cache/cache.tar -C $BUILD_SOURCESDIRECTORY
+    displayName: Extract cache
+
+  - bash: $(cmd)
+    displayName: Run Test
+
+- phase: IntegrationTest
+  dependsOn: UnitTest
+  queue:
+    name: Hosted Linux Preview
+    parallel: 2
+    matrix:
+      IntegrationTestCosmos:
+        cmd: ./node_modules/yarn/bin/yarn test ./tests/integration/**/*.spec.ts
+        name: cosmos system test
+        DB_CONN_STRING: $(CosmosConnStr)
+      IntegrationTestMongo:
+        cmd: ./node_modules/yarn/bin/yarn test ./tests/integration/**/*.spec.ts
+        name: mongo system test
+        DB_CONN_STRING: mongodb://localhost:27017/configdb
+
+  steps:
+  - task: DownloadBuildArtifacts@0
+    displayName: Restore Packages
+    inputs:
+      artifactName: cache
+      downloadPath: $(Build.SourcesDirectory)
+  
+  - bash: tar -xzf $BUILD_SOURCESDIRECTORY/cache/cache.tar -C $BUILD_SOURCESDIRECTORY
+    displayName: Extract cache
+
+  - bash: $(cmd)
+    displayName: Run Test

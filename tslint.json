@@ -1,0 +1,19 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "member-access": false,
+    "no-console": [false, "log", "error", "debug", "info", "time", "timeEnd", "trace"],
+    "no-duplicate-variable": true,
+    "no-switch-case-fall-through": true,
+    "no-var-requires": false,
+    "object-literal-sort-keys": false,
+    "switch-default": true,
+
+    "typedef": [true, "parameter", "property-declaration"],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"]
+  },
+  "linterOptions": {
+    "exclude": ["src/assets/**/*.js"]
+  }
+}
