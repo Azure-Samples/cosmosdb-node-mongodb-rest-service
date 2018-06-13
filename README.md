@@ -235,3 +235,7 @@ Preform the following steps to deploy this app to an Azure Web App from a local 
 - TypeScript Docs : https://www.typescriptlang.org/samples/index.html
 - Swagger : https://swagger.io/
 - Postman : https://www.getpostman.com
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
