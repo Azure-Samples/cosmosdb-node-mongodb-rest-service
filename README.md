@@ -236,6 +236,9 @@ Preform the following steps to deploy this app to an Azure Web App from a local 
 - Swagger : https://swagger.io/
 - Postman : https://www.getpostman.com
 
+## Project code of conduct
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments. 
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
