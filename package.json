@@ -1,7 +1,7 @@
 {
   "name": "astros",
   "version": "1.0.0",
-  "description": "Sample Node.js REST service for MongoDB with seamless integration with CosmosDB",
+  "description": "Sample Node.js REST service for MongoDB with seamless integration with Azure CosmosDB for MongoDB API",
   "engineStrict": false,
   "engines": {
     "node": ">= 8.0"
