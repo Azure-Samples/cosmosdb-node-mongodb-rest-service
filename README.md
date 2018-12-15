@@ -1,14 +1,14 @@
-## Azure Cosmos DB - MongoDB API: Astros API Service
+﻿## Azure Cosmos DB for MongoDB API: Astros API Service
 
-Astros is a sample Node.js and TypeScript REST service written for MongoDB API. Through changing an environment variable for database connection, Astros can run locally using MongoDB or as an Azure Web App using Cosmos DB.
+Astros is a sample Node.js and TypeScript REST service written for MongoDB API. Through changing an environment variable for database connection, Astros can run locally using MongoDB or as an Azure Web App using Azure Cosmos DB for MongoDB API.
 
 ## Deploy to Azure
 
-In order to deploy to Azure using the following method, you must have an Azure subscription and a Cosmos DB instance running using the MongoDB API.
+In order to deploy to Azure using the following method, you must have an Azure subscription and an Azure Cosmos DB for MongoDB API instance.
 
 If you do not have an Azure subscription, create a [free account](https://azure.microsoft.com/en-us/free/) before you begin.
 
-For instructions on how to create a Cosmos DB account please see [Create An Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-nodejs#create-an-azure-cosmos-db-account).
+For instructions on how to create an Azure Cosmos DB for MongoDB API account please see [Create An Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-nodejs#create-an-azure-cosmos-db-account).
 
 Click on the button below to deploy this repository to an Azure Web App. You will be prompted to give an appName, referred to as `<app_name>` throughout, which must be globally unique. This parameter will be used in the Web App's URL as `https://<app_name>.azurewebsites.net`. You will also be prompted to supply the primary connection string to your Cosmos DB instance.
 
@@ -18,7 +18,7 @@ After provisioning to Azure, you can navigate to `https://<app_name>.azurewebsit
 
 ## Running this sample
 
-You can run this sample either locally or in Azure. Running it locally supports MongoDB and Cosmos DB. To run locally on Cosmos DB, you can either use an actual Cosmos DB instance, or install the emulator. When running on Azure, Cosmos DB is the supported database option.
+You can run this sample either locally or in Azure. Running it locally supports MongoDB and Azure Cosmos DB. To run locally on Azure Cosmos DB, you can either use an actual Cosmos DB instance, or install the emulator. When running on Azure, Azure Cosmos DB for MongoDB API is the supported database option.
 
 ### Running the Sample locally with MongoDB
 
@@ -56,7 +56,7 @@ Preform the following steps to run the application locally connected to a Mongo 
 1.  [Download and Install Cosmos DB Emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator) on your local machine.
 2.  Now, you can follow the above steps 2-9 to test the api against Cosmos DB.
 
-Another alternative is to [Create An Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-nodejs#create-an-azure-cosmos-db-account) and to set `DB_CONN_STRING` from step 6 to the primary connection string of your Cosmos DB instance
+Another alternative is to [Create An Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-nodejs#create-an-azure-cosmos-db-account) and to set `DB_CONN_STRING` from step 6 to the primary connection string of your Azure moCosmos DB instance
 
 ### Running the Sample using an Azure Web App
 
