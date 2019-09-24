@@ -7,10 +7,10 @@ languages:
 products:
 - azure
 description: "Astros is a sample Node.js and TypeScript REST service written for MongoDB API."
-urlFragment: cosmosdb-node-mongodb-rest-service
+urlFragment: azure-cosmos-astros-api
 ---
 
-## Azure Cosmos DB - MongoDB API: Astros API Service
+# Azure Cosmos DB - MongoDB API: Astros API Service
 
 Astros is a sample Node.js and TypeScript REST service written for MongoDB API. Through changing an environment variable for database connection, Astros can run locally using MongoDB or as an Azure Web App using Cosmos DB.
 
