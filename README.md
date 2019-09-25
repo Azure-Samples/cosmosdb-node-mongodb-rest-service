@@ -18,7 +18,7 @@ Astros is a sample Node.js and TypeScript REST service written for MongoDB API. 
 
 In order to deploy to Azure using the following method, you must have an Azure subscription and a Cosmos DB instance running using the MongoDB API.
 
-If you do not have an Azure subscription, create a [free account](https://azure.microsoft.com/en-us/free/) before you begin.
+If you do not have an Azure subscription, create a [free account](https://azure.microsoft.com/free/) before you begin.
 
 For instructions on how to create a Cosmos DB account please see [Create An Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-nodejs#create-an-azure-cosmos-db-account).
 
