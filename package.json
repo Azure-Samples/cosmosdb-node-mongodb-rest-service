@@ -79,7 +79,7 @@
     "swagger-jsdoc": "^1.9.7",
     "ts-loader": "^4.3.0",
     "ts-node": "^6.0.3",
-    "typescript": "~2.8.3",
+    "typescript": "3.1.6",
     "url-parse": "^1.4.1",
     "webpack": "^4.8.1",
     "webpack-cli": "^3.0.3",
