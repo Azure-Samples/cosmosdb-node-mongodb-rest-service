@@ -4,7 +4,7 @@ import { ConnectionOptions } from 'mongoose';
 import * as parse from 'url-parse';
 import { configs } from './environment';
 
-const options: ConnectionOptions = { keepAlive: 1 };
+const options: ConnectionOptions = { keepAlive: true };
 
 export async function connectDb(connectionString: string) {
   // URL encodes the password for a Cosmos DB connection string
