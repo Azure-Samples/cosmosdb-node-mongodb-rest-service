@@ -65,7 +65,7 @@
     "@types/webpack": "^4.1.6",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "http-status": "^1.1.2",
     "husky": "^1.0.0-rc.3",
     "kcors": "^2.2.1",
