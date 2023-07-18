@@ -70,7 +70,7 @@
     "husky": "^1.0.0-rc.3",
     "kcors": "^2.2.1",
     "koa-bodyparser": "^4.2.1",
-    "mongoose": "^5.0.17",
+    "mongoose": "^5.13.20",
     "morgan": "^1.9.0",
     "reflect-metadata": "^0.1.12",
     "routing-controllers": "^0.7.7",
